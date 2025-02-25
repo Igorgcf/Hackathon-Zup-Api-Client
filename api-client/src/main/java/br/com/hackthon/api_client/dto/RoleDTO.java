@@ -40,5 +40,19 @@ public class RoleDTO extends RepresentationModel<RoleDTO> {
         id = entity.getId();
         authority = entity.getAuthority();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        RoleDTO roleDTO = (RoleDTO) o;
+        return Objects.equals(id, roleDTO.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), id);
+    }
 }
 
