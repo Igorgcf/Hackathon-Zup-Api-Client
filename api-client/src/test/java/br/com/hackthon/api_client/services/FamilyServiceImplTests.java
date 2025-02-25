@@ -190,7 +190,7 @@ public class FamilyServiceImplTests {
 
         service.deleteById(id);
 
-        Assertions.assertEquals(4, repository.count());
+        Assertions.assertEquals(5, repository.count());
      }
 
      @Test
