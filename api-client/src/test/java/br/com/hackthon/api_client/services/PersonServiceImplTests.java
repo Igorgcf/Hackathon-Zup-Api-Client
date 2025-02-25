@@ -66,7 +66,7 @@ public class PersonServiceImplTests {
 
         PageRequest pageable = PageRequest.of(0, 12);
 
-        String lastName = "Albuquerque";
+        String lastName = "Schendroski";
 
         Page<PersonDTO> page = service.findAllPagedByLastName(lastName, pageable);
 
@@ -150,7 +150,7 @@ public class PersonServiceImplTests {
 
         PageRequest pageable = PageRequest.of(0, 12);
 
-        String cpf = "323.244.300-10";
+        String cpf = "641.179.010-87";
 
         Page<PersonDTO> page = service.findAllPagedByCpf(cpf, pageable);
 
@@ -206,7 +206,7 @@ public class PersonServiceImplTests {
 
         dto = service.insert(dto);
 
-        Assertions.assertEquals(6, repository.count());
+        Assertions.assertEquals(5, repository.count());
 
     }
 
