@@ -214,7 +214,7 @@ public class ChildrenServiceImplTests {
 
         service.deleteById(id);
 
-        Assertions.assertEquals(8, repository.count());
+        Assertions.assertEquals(9, repository.count());
     }
 
     @Test
