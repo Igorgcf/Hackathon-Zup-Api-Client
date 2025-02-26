@@ -82,9 +82,9 @@ git clone https://github.com/IgorTecnologia/Hackathon-Zup-API-Client.git
 
 Baixe esses arquivos e importe-os para o seu Postman para utilizar os métodos HTTP prontos junto com as variáveis ​​de ambiente já configuradas, para realizar as solicitações/respostas:
 
-[Download Collections](https://github.com/IgorTecnologia/Hackathon-Zup-API-Client/blob/docs-postman/Hack-api-client.postman_collection.json)
+[Download Collections](https://github.com/Igorgcf/Hackathon-Zup-Api-Client/blob/docs-postman/Hack-api-client.postman_collection.json)
 
-[Download Environment variables](https://github.com/IgorTecnologia/Hackathon-Zup-API-Client/blob/docs-postman/Local-host.postman_environment.json)
+[Download Environment variables](https://github.com/Igorgcf/Hackathon-Zup-Api-Client/blob/docs-postman/Local-host.postman_environment.json)
 
 ## API Endpoints
 Exemplo de end-points de User:
