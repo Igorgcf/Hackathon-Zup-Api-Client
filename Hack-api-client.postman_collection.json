@@ -1,0 +1,670 @@
+{
+	"info": {
+		"_postman_id": "174aa492-3b20-4a4b-b34d-014d6eda9bd5",
+		"name": "Hack-api-client",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30344579",
+		"_collection_link": "https://i-dont-know-4771.postman.co/workspace/My-Workspace~90f34747-e989-40d5-810f-04cd3cfdb1dd/collection/30344579-174aa492-3b20-4a4b-b34d-014d6eda9bd5?action=share&source=collection_link&creator=30344579"
+	},
+	"item": [
+		{
+			"name": "Person",
+			"item": [
+				{
+					"name": "Find All Paged",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/persons"
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Paged By FirstName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/persons/firstName/Tomás?page=0&size=12&sort=age,asc",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"persons",
+								"firstName",
+								"Tomás"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "12"
+								},
+								{
+									"key": "sort",
+									"value": "age,asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Paged By LastName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/persons/lastName/Gonçalves?page=0&size=12&sort=age,asc",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"persons",
+								"lastName",
+								"Gonçalves"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "12"
+								},
+								{
+									"key": "sort",
+									"value": "age,asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Paged By Age",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/persons/age/38?page=0&size=12&sort=firstName,asc",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"persons",
+								"age",
+								"38"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "12"
+								},
+								{
+									"key": "sort",
+									"value": "firstName,asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Paged By Income",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/persons/income/7000?page=0&size=12&sort=firstName,asc",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"persons",
+								"income",
+								"7000"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "12"
+								},
+								{
+									"key": "sort",
+									"value": "firstName,asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/persons/d2b2e9b7-b959-4aa4-ad15-b341d4b4c618"
+					},
+					"response": []
+				},
+				{
+					"name": "Insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Vitória\",\r\n    \"lastName\": \"Alric de Freitas\",\r\n    \"dateBirth\": \"1995-09-04\",\r\n    \"age\" : 29,\r\n    \"cpf\": \"123.456.789-15\",\r\n    \"income\": 7000.00,\r\n    \"family\" : {\r\n        \r\n        \"lastName\" : \"Gonçalves\",\r\n        \"state\" : \"SP\",\r\n        \"city\" : \"São Paulo\",\r\n        \"street\" : \"Soares de Faria\",\r\n        \"addressNumber\" : 144\r\n    }\r\n\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/persons"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Mário\",\r\n    \"lastName\": \"Gonçalves da Silva\",\r\n    \"dateBirth\": \"1986-09-04\",\r\n    \"age\" : 38,\r\n    \"cpf\": \"123.456.789-70\",\r\n    \"income\": 7000.00,\r\n    \"family\" : {\r\n\r\n        \"lastName\" : \"Gonçalves\",\r\n        \"state\" : \"SP\",\r\n        \"city\" : \"São Paulo\",\r\n        \"street\" : \"Soares de Faria\",\r\n        \"addressNumber\" : 144\r\n        \r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/persons/d2b2e9b7-b959-4aa4-ad15-b341d4b4c618"
+					},
+					"response": []
+				},
+				{
+					"name": "By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{host}}/persons/331ffcb0-8614-4103-af5c-9b5f23bb0af3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Family",
+			"item": [
+				{
+					"name": "Find All Paged",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/families"
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Paged By LastName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/families/lastName/alr"
+					},
+					"response": []
+				},
+				{
+					"name": "Find All By State",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/families/state/SP?page=0&size=12&sort=city,ASC",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"families",
+								"state",
+								"SP"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "12"
+								},
+								{
+									"key": "sort",
+									"value": "city,ASC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All By City",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/families/city/São Paulo?page=0&size=12&sort=street,DESC",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"families",
+								"city",
+								"São Paulo"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "12"
+								},
+								{
+									"key": "sort",
+									"value": "street,DESC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/families/99d15978-0281-4c67-8a69-8a47283df5f4"
+					},
+					"response": []
+				},
+				{
+					"name": "Insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lastName\" : \"Gonçalves\",\r\n    \"state\" : \"SP\",\r\n    \"city\" : \"São Paulo\",\r\n    \"street\" : \"Soares de Faria\",\r\n    \"addressNumber\" : 144,\r\n    \"members\" : [\r\n        {\r\n            \"firstName\": \"Ana\",\r\n            \"lastName\": \"Gonçalves Pereira\",\r\n            \"dateBirth\": \"1960-01-01\",\r\n            \"age\": 64,\r\n            \"cpf\": \"323.244.300-15\",\r\n            \"income\": 3000.0\r\n        }\r\n    ],\r\n    \"children\" : [\r\n        {\r\n            \"firstName\": \"Pedro\",\r\n            \"lastName\": \"Pereira Almeida\",\r\n            \"dateBirth\": \"2006-01-01\",\r\n            \"age\": 18,\r\n            \"cpf\": \"832.092.230-57\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/families"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"lastName\": \"Alric\",\r\n    \"state\": \"SP\",\r\n    \"city\": \"São Paulo\",\r\n    \"street\": \"Soares de Faria\",\r\n    \"addressNumber\": 4,\r\n    \"members\" : [\r\n        {\r\n            \"firstName\": \"Vitória\",\r\n            \"lastName\": \"Alric de Freitas\",\r\n            \"dateBirth\": \"1995-09-04\",\r\n            \"age\" : 29,\r\n            \"cpf\": \"123.456.789-15\",\r\n            \"income\": 7000.00\r\n        }\r\n    ],\r\n    \"children\" : [\r\n        {\r\n            \"firstName\": \"Lucas\",\r\n            \"lastName\": \"Alric Gonçalves\",\r\n            \"dateBirth\": \"2004-03-03\",\r\n            \"age\": 20,\r\n            \"cpf\": \"842.847.660-77\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/families/f0a5e586-52a2-47df-ad81-c4b9174c91a0"
+					},
+					"response": []
+				},
+				{
+					"name": "By id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{host}}/families/5fa1c99b-b524-41aa-96f9-b45026c91a1d"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Children",
+			"item": [
+				{
+					"name": "Find All Paged",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/children?page=0&size=12&sort=firstName,asc",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"children"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "12"
+								},
+								{
+									"key": "sort",
+									"value": "firstName,asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Paged By FirstName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/children/firstName/lu"
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Paged By LastName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/children/lastName/Barbosa"
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Paged By Age",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/children/age/18"
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Paged By Cpf",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/children/cpf/230-50"
+					},
+					"response": []
+				},
+				{
+					"name": "Find By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/children/69ef6feb-685b-47a1-93cb-68aa925189d1"
+					},
+					"response": []
+				},
+				{
+					"name": "Insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Lucas\",\r\n    \"lastName\": \"Alric Gonçalves\",\r\n    \"dateBirth\": \"2004-03-03\",\r\n    \"age\": 20,\r\n    \"cpf\": \"842.847.660-77\",\r\n    \"family\" : {\r\n        \r\n        \"lastName\" : \"Gonçalves\",\r\n        \"state\" : \"SP\",\r\n        \"city\" : \"São Paulo\",\r\n        \"street\" : \"Soares de Faria\",\r\n        \"addressNumber\" : 777\r\n    }\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/children"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Pedro\",\r\n    \"lastName\": \"Alric Barbosa\",\r\n    \"dateBirth\": \"2004-03-03\",\r\n    \"age\": 20,\r\n    \"cpf\": \"842.847.660-87\",\r\n    \"family\" : {\r\n     \r\n        \"lastName\": \"Barbosa Andrade\",\r\n        \"state\": \"MS\",\r\n        \"city\": \"Campo Grande\",\r\n        \"street\": \"Alameda Café\",\r\n        \"addressNumber\": 87\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/children/69ef6feb-685b-47a1-93cb-68aa925189d1"
+					},
+					"response": []
+				},
+				{
+					"name": "By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{host}}/children/69ef6feb-685b-47a1-93cb-68aa925189d1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "Find All Paged",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/roles"
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Paged By Authority",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/roles/authority/sel"
+					},
+					"response": []
+				},
+				{
+					"name": "Find By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/roles/40b9d260-e7ca-42fd-98f6-7b2a8270dca1"
+					},
+					"response": []
+				},
+				{
+					"name": "Insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"authority\" : \"Assistent\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/roles"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"authority\" : \"Seller\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/roles/40b9d260-e7ca-42fd-98f6-7b2a8270dca1"
+					},
+					"response": []
+				},
+				{
+					"name": "By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{host}}/roles/40b9d260-e7ca-42fd-98f6-7b2a8270dca1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Find All Paged",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Find By Username",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/users/username/igor"
+					},
+					"response": []
+				},
+				{
+					"name": "Find By Email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/users/email/igor"
+					},
+					"response": []
+				},
+				{
+					"name": "Find By CPF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/users/cpf/123.456.789.0"
+					},
+					"response": []
+				},
+				{
+					"name": "Find By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/users/0647119e-aea6-44f3-8670-10822d5bd229"
+					},
+					"response": []
+				},
+				{
+					"name": "Insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"igorTecnologia\",\r\n    \"email\": \"igor@hotmail.com\",\r\n    \"password\" : \"1234567\",\r\n    \"fullName\" : \"Igor Gonçalves\",\r\n    \"phoneNumber\" : \"+55 19 997541011\",\r\n    \"cpf\" : \"123.456.789.0\",\r\n    \"imageUrl\" : \"www.img.com\",\r\n    \"roles\" : [\r\n        {\r\n            \"authority\" : \"Admin\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    \r\n{\r\n    \r\n    \"fullName\": \"Igor Freitas\",\r\n    \"phoneNumber\": \"+55 19 99123-4567\",\r\n    \"cpf\": \"987.654.321.0\",\r\n    \"imageUrl\": \"www.image.com\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/users/aa54897b-6a2d-41aa-92b5-2dcd045b0577"
+					},
+					"response": []
+				},
+				{
+					"name": "Update password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\" : \"1234567\",\r\n    \"password\" : \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/users/password/aa54897b-6a2d-41aa-92b5-2dcd045b0577"
+					},
+					"response": []
+				},
+				{
+					"name": "By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{host}}/users/aa54897b-6a2d-41aa-92b5-2dcd045b0577"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
